@@ -20,6 +20,7 @@ stages:
       CloudConfig:
         Public:
           SubscriptionConfiguration: $(sub-config-azure-cloud-test-resources)
+          Location: 'westus3'
         Canary:
           SubscriptionConfiguration: $(sub-config-azure-cloud-test-resources)
           Location: 'centraluseuap'
