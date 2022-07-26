@@ -176,6 +176,7 @@ class _QueryExecutionAggregateEndpointComponent(_QueryExecutionEndpointComponent
                 self._local_aggregators.append(_SumAggregator())
 
     async def __anext__(self):
+        print(self._execution_context)
         async for res in self._execution_context:
             for item in res: #TODO check on this being an async loop
                 for operator in self._local_aggregators:
